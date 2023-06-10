@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css'
 import { BiLike } from "react-icons/bi";
+import { NavLink } from 'react-router-dom'
 
 const About = () => {
     return (
@@ -22,11 +23,11 @@ const About = () => {
                         It might not seem like it, but DEU.com has thousands of lines
                         of code powering it and it's quite popular! Jake likes design and I do
                         all the coding as well as make sure the site is fast. If it's running
-                        slow or you have any suggestions, please <strong>contact us</strong>.
+                        slow or you have any suggestions, please <NavLink className="a" to={'/contact'}>contact us</NavLink>.
                     </p>
                     <h2 className='about subTitle'>About This Site</h2>
                     <p className='txt'>
-                        DEU.com currently gets about 500,000+ visitors per month
+                        <NavLink className="a" to={'/'}>DEU.com</NavLink> currently gets about 500,000+ visitors per month
                         (and growing rapidly!) from other sites who link to us, from people who
                         share it on Facebook, &amp; from the search engines. If you find it
                         useful we hope you will share it around too!</p>
@@ -43,12 +44,12 @@ const About = () => {
                         linking to amazon.com. If you buy any products from Amazon after
                         clicking a link on this website, we will earn a small commission which
                         helps us pay for the costs associated with running this site. Please
-                        read our <strong>Privacy Policy</strong> and <strong>Terms of Use</strong>.
+                        read our <NavLink className="a" to={'./privacy'}>Privacy Policy</NavLink>.
                     </p>
                     <h2 className='about subTitle2 '>Formulas Used</h2>
                     <p className='txt'>
-                        At its core, DEU.com uses the <strong>Mifflin-St Jeor</strong> formula to
-                        calculate an estimate of your <strong>Basal Metabolic</strong> Rate, and then we adjust
+                        At its core, DEU.com uses the <a className='a' href='https://pubmed.ncbi.nlm.nih.gov/15883556/'>Mifflin-St Jeor</a> formula to
+                        calculate an estimate of your <a className='a' href='https://en.wikipedia.org/wiki/Basal_metabolic_rate'>Basal Metabolic</a> Rate, and then we adjust
                         the numbers to take your activity level into account.
                     </p>
                     <h3 className='about subTitle3'>Mifflin-St Jeor Equation</h3>

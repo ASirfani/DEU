@@ -37,26 +37,26 @@
   }
 
   .titlePage{
-    font-size: 35px;
+    font-size: 34px;
   }
 
   .subTitle{
     text-align: left;
-    font-size: 29px;
+    font-size: 28px;
     border-bottom: none;
     margin-bottom: 0px;
   }
 
   .subTitle2{
     text-align: left;
-    font-size: 25px;
+    font-size: 24px;
     border-bottom: none;
     margin-bottom: 0px;
   }
 
   .subTitle3{
     text-align: left;
-    font-size: 17px;
+    font-size: 16px;
     border-bottom: none;
     margin-bottom: 0px;
     font-weight: 500;
@@ -67,7 +67,7 @@
     text-align: justify;
     width: 100%;
     margin: 10px auto;
-    font-size: 14px;
+    font-size: 13px;
     color: #000;
  
   }
@@ -103,6 +103,10 @@
   .lsbtn{
     background-color: #1877F2;
   }
+  .lsbtn:hover{
+    background-color: #5e9cee;
+  }
+ 
  
   .icon .txtbtn{
     background-color:#777777;

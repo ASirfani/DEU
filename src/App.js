@@ -6,7 +6,6 @@ import About from './Deu/pages/About'
 import Contact from './Deu/pages/Contact'
 import Faq from './Deu/pages/Faq'
 import Calculate from './Deu/pages/Calculate'
-import Terms from './Deu/pages/Terms';
 import Privacy from './Deu/pages/Privacy';
 import NotFounds from './NotFounds'
 
@@ -21,7 +20,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/calculate" element={<Calculate />} />
-          <Route path="/terms" element={<Terms/>}/>
           <Route path='/privacy' element={<Privacy/>} />
         </Route>
         <Route path="/*" element={<NotFounds />} />

@@ -1,0 +1,25 @@
+
+
+
+.privacy-ul{
+    padding-left: 35px;
+    padding-right: 10px;
+}
+
+
+li{
+    font-size: 12px;
+}
+.txts{
+    font-size: 12px;
+}
+
+
+a{
+    
+    text-decoration: none;
+}
+a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}

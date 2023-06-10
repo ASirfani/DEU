@@ -11,8 +11,9 @@ const Menu = () => {
       </div>
       <div className="user-info">
         <NavLink className='link' to="/about" >About</NavLink>
-        <NavLink className='link' to="/contact" >Contact</NavLink>
         <NavLink className='link' to="/faq" >FAQ</NavLink>
+        <NavLink className='link' to="/contact" >Contact</NavLink>
+
       </div>
     </nav>
   );

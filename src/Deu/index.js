@@ -12,7 +12,7 @@ const Deu = () => {
           <Menu />
         </div>
       </nav>
-          <Outlet />
+      <Outlet />
       <footer className="footer">
         <div className='container-nav'>
           <Footer />

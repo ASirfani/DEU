@@ -58,8 +58,8 @@ const Home = () => {
     return (
         <div className="content">
             <div className="container-content">
-                <h2>Learn How Many Calories You Burn Every Day</h2>
-                <p>
+                <h2 className='txtTitle'>Learn How Many Calories You Burn Every Day</h2>
+                <p className='txtp'>
                     <strong>
                         Use the DEU calculator to learn your Daily Energy Usage
                     </strong>
@@ -135,9 +135,9 @@ const Home = () => {
                     </div>
                 </form>
                 <hr style={{ color: '#000', width: '100%' }} />
-                <p>
+                <p className='txtp' >
                     <small>
-                        Questions? Email me at rob@tdeecalculator.net
+                        Questions? Email me at Irfan@deu.com
                     </small>
                     <br />
                     <small>...and don't forget to
@@ -148,14 +148,14 @@ const Home = () => {
             <div className="container-outConten">
                 <div className="outContent">
                     <div>
-                        <h2>How DEU Is Calculated</h2>
-                        <p  >
+                        <h2 className='txtTitle'>How DEU Is Calculated</h2>
+                        <p className='txtp' >
                             Your Daily Energy Usage (DUE) is an estimation of how many calories
                             you burn per day when exercise is taken into account. It is
                             calculated by first figuring out your Basal Metabolic Rate, then
                             multiplying that value by an activity multiplier.
                         </p>
-                        <p>Since your BMR represents how many calories your body burns when at rest, it is
+                        <p className='txtp'>Since your BMR represents how many calories your body burns when at rest, it is
                             necessary to adjust the numbers upwards to account for the calories
                             you burn during the day. This is true even for those with a sedentary
                             lifestyle. Our TDEE calculator uses the best formulas and displays

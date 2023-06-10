@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './index.css'
+import { NavLink } from 'react-router-dom'
 
 const Faq = () => {
 
@@ -49,7 +50,7 @@ const Faq = () => {
                 <div>
                     <h1 className='about titlePage'>FAQ</h1>
                     <p className='txt'>
-                        Don't see your question? Please submit your question on the <strong>contact page</strong>.
+                        Don't see your question? Please submit your question on the <NavLink className="a" to={'/contact'}>contact page</NavLink>.
                     </p>
                     {faqData.map((faq, index) => (
                         <div className='container-question' key={index} onClick={() => toggleAnswer(index)}>
@@ -72,7 +73,7 @@ const Faq = () => {
                         </div>
                     ))}
 
-                  
+
 
 
                 </div>
