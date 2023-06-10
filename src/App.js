@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Deu from './Deu'
+import Home from './Deu/pages/Home'
+import About from './Deu/pages/About'
+import Contact from './Deu/pages/Contact'
+import Faq from './Deu/pages/Faq'
+import Calculate from './Deu/pages/Calculate'
+import Terms from './Deu/pages/Terms';
+import Privacy from './Deu/pages/Privacy';
+import NotFounds from './NotFounds'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Deu />} >
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/calculate" element={<Calculate />} />
+          <Route path="/terms" element={<Terms/>}/>
+          <Route path='/Privacy' element={<Privacy/>} />
+        </Route>
+        <Route path="/*" element={<NotFounds />} />
+      </Routes>
+    </Router>
   );
 }
 

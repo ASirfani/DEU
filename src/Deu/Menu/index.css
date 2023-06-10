@@ -1,0 +1,45 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+ 
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+  color: black;
+}
+
+
+.links {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link.active {
+  font-weight: bold;
+}
