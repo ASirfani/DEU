@@ -1,4 +1,387 @@
-
-.calculate{
+.calculate {
     height: 100px;
 }
+
+.startState {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.startState h1 {
+    flex: 1;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.startState .iconsFace {
+    flex: 1;
+}
+
+.startState p {
+    font-size: 11.5px;
+    color: black;
+}
+
+.iconBtn {
+    background-color: #1877F2;
+    margin-right: 5px;
+    border-radius: 3.5px;
+    width: inherit;
+    padding: 0px 7px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.iconBtn:hover {
+
+    background-color: #7aabea;
+}
+
+
+.state-form form {
+    /* background-color: #1877F2; */
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    color: black;
+}
+
+
+.state-form form .state-input {
+    width: 35px;
+    padding: 0px 2px;
+    border-radius: 5px;
+    height: 45%;
+    text-align: center;
+    outline: none;
+    border-width: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+
+.state-form form .state-input:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.state-form form .state-input:focus {
+    box-shadow: rgba(67, 81, 241, 0.35) 0px 2px 8px;
+}
+
+.state-form form select {
+    height: 45%;
+    border-radius: 5px;
+    outline-style: none;
+    border-width: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.state-form form select:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.state-form form select:focus {
+    box-shadow: rgba(67, 81, 241, 0.35) 0px 2px 8px;
+
+}
+
+.state-form form .fatBody {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+
+.state-form form .fatBody .p1 {
+    font-size: 11px;
+    color: black;
+    position: absolute;
+    top: 0;
+}
+
+.state-form form .fatBody .p2 {
+
+    bottom: 0;
+    font-size: 11px;
+    color: black;
+    position: absolute;
+}
+
+
+.state-form form .fatBody input {
+    font-size: 11px;
+    color: black;
+    height: 45%;
+
+}
+
+button {
+    height: 45%;
+    padding: 4px 8px;
+    background-color: #297deb;
+    outline-style: none;
+    border-radius: 3.5px;
+    border-width: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+button:hover {
+    height: 45%;
+    padding: 4px 8px;
+    background-color: #2D6BA1;
+    box-shadow: rgba(67, 81, 241, 0.35) 0px 2px 8px;
+}
+
+.calories-contianer {
+    height: 290px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+}
+
+
+.maintenance {
+    height: 100%;
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.maintenance h3 {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+
+}
+
+.maintenance-calories {
+    background-color: #FDF6E5;
+    height: 20px;
+    margin: 10px;
+    margin-left: 0;
+    flex: 1px;
+    border-radius: 20px;
+    border-color: #EDE7BB;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.calories-perday {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.calories-perweek {
+    flex: 1;
+    border-color: #EDE7BB;
+    border-top-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintenance-calories div h1 {
+    margin: 0;
+
+}
+
+.maintenance-calories div p {
+    margin: 0;
+    font-size: 13px;
+    color: #AF6B33;
+    font-weight: 500;
+
+}
+
+.maintenanceTxt {
+    height: 100%;
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color: #5F5F5F;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.maintenanceTxt p {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.maintenanceTxt-table {
+    border-collapse: collapse;
+    height: 100%;
+
+}
+
+
+.maintenanceTxt-table tr {
+    border-top: 1px solid #DDDDDD;
+}
+
+.maintenanceTxt-table tr td {
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.Muscular-container {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.Muscular-container p {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+
+}
+
+.muscular-nav {
+    flex: 1;
+    gap: 2px;
+    border-bottom: 1px solid #DDDDDD;
+    height: 38px;
+    margin-top: 10px;
+}
+
+.muscular-nav a {
+    padding: 14px;
+    height: 100%;
+    text-decoration: none;
+    
+
+}
+
+.muscular-nav span {
+    font-size: 12px;
+    float: right;
+}
+
+.muscular-nav a:hover {
+    border: 1px solid #DDDDDD;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom-color: #fff;
+    text-decoration: none;
+}
+
+
+.nav-containverTxt {
+    height: inherit;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.nav-containverTxt p {
+    font-size: 14px;
+    color: #000;
+}
+
+
+.carb {
+    flex: 1;
+    gap: 10px;
+    display: flex;
+    /* Use flexbox */
+    margin-top: 30px;
+}
+
+.cardTxt{
+    background-color: #1877F2;
+    padding: 2px 5px;
+    font-size: 13px;
+
+}
+
+.carb div {
+    flex-grow: 1;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carb div .carb-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 20px 20px 20px;
+    border-width: 1px;
+    background-color: #FDF6E5;
+    border-color: #EDE7BB;
+    border-style: solid;
+
+}
+
+
+.carb-container div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.carb-container div:nth-child(1),
+.carb-container div:nth-child(2) {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #EDE7BB;
+
+}
+
+.carb-container div h3 {
+    margin: 0;
+    text-decoration: underline dotted 1px;
+    font-size: 30px;
+    color: #000;
+}
+.carb-container div p {
+    margin: 0;
+    font-size: 12px;
+    color: #000;
+    
+}
+
+
