@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './index.css'
 import { AiTwotoneLike } from "react-icons/ai";
+import { MyContext } from '../../Context/Context';
 
 const Calculate = () => {
+    const {heights,weights,sedentary,light,bmrs,heavy,athlete,moderate} = useContext(MyContext);
 
     const activity = [
         'Sedentary',
@@ -48,7 +50,6 @@ const Calculate = () => {
                                 ))}
 
                             </select>
-
                             <div className='fatBody'>
                                 <p className='p1'>bodyfat</p>
                                 <input className='state-input' />
@@ -65,42 +66,42 @@ const Calculate = () => {
                             <h3>Your Maintenance Calories</h3>
                             <div className='maintenance-calories'>
                                 <div className='calories-perday'>
-                                    <h1>568</h1>
+                                    <h1>{sedentary}</h1>
                                     <p>calories per day</p>
                                 </div>
                                 <div className='calories-perweek'>
-                                    <h1>3,973</h1>
+                                    <h1>{sedentary * 7}</h1>
                                     <p>calories per week</p>
                                 </div>
                             </div>
                         </div>
                         <div className='maintenanceTxt'>
                             <p>Based on your stats, the best estimate for your maintenance calories is
-                                <strong> 568</strong> calories per day based on the Katch-McArdle Formula, which is widely known to be the most accurate when body fat is provided. The table below shows the difference if you were to have selected a different activity level.</p>
+                                <strong> {sedentary}</strong> calories per day based on the Katch-McArdle Formula, which is widely known to be the most accurate when body fat is provided. The table below shows the difference if you were to have selected a different activity level.</p>
                             <table className='maintenanceTxt-table'>
                                 <tr>
                                     <td>Basal Metabolic Rate</td>
-                                    <td>413 calories per day</td>
+                                    <td>{bmrs} calories per day</td>
                                 </tr>
                                 <tr>
                                     <td>Sedentary</td>
-                                    <td>495 calories per day</td>
+                                    <td>{sedentary} calories per day</td>
                                 </tr>
                                 <tr>
                                     <td>Light Exercise</td>
-                                    <td>568 calories per dayy</td>
+                                    <td>{light} calories per dayy</td>
                                 </tr>
                                 <tr>
                                     <td>Moderate Exercise</td>
-                                    <td>640 calories per day</td>
+                                    <td>{moderate} calories per day</td>
                                 </tr>
                                 <tr>
                                     <td>Heavy Exercise</td>
-                                    <td>712 calories per day</td>
+                                    <td>{heavy} calories per day</td>
                                 </tr>
                                 <tr>
                                     <td>Athlete</td>
-                                    <td>413 calories per day</td>
+                                    <td>{athlete} calories per day</td>
                                 </tr>
 
                             </table>
@@ -134,7 +135,7 @@ const Calculate = () => {
                             </table>
                         </div>
                         <div className='maintenanceTxt'>
-                            <h3>BMI Score: 1,875.0</h3>
+                            <h3>BMI Score: {(weights / Math.pow(heights,2)?0:(weights / Math.pow(heights,2 )))}</h3>
                             <p>Your <strong>BMI</strong> is <strong>1,875.0</strong>, which means you are classified as <strong>Obese</strong>…</p>
                             <p>🔥 People who use this simple tool from Amazon lose significantly more weight versus people who don't.</p>
                             <table className='maintenanceTxt-table'>

@@ -8,23 +8,27 @@ import Faq from './Deu/pages/Faq'
 import Calculate from './Deu/pages/Calculate'
 import Privacy from './Deu/pages/Privacy';
 import NotFounds from './NotFounds'
+import {  MyContextProvider } from './Deu/Context/Context';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Deu />} >
-          <Route path='/' element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/calculate" element={<Calculate />} />
-          <Route path='/privacy' element={<Privacy/>} />
-        </Route>
-        <Route path="/*" element={<NotFounds />} />
-      </Routes>
-    </Router>
+    <MyContextProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Deu />} >
+            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/calculate" element={<Calculate />} />
+            <Route path='/privacy' element={<Privacy />} />
+          </Route>
+          <Route path="/*" element={<NotFounds />} />
+        </Routes>
+      </Router>
+    </MyContextProvider>
+
   );
 }
 
