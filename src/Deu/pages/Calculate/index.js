@@ -234,10 +234,9 @@ const Calculate = () => {
                         <p style={{ alignSelf: "center" }}>There are 4 calories per gram of both protein and carbohydrates, and 9 calories per gram of fats.</p>
 
                         <p>Not sure what to eat? EatThisMuch.com will automatically generate perfect meal plans for you 💪</p>
-                        <h2>Calorie Tracking Tools</h2>
-                        <p>There are only 3 tools required for tracking your calories effectively…</p>
-
-                        <div>
+                        {/* <h2>Calorie Tracking Tools</h2>
+                        <p>There are only 3 tools required for tracking your calories effectively…</p> */}
+                        {/* <div>
 
                         </div>
                         <h3>2 Supplements Every Man Should Take</h3>
@@ -245,7 +244,7 @@ const Calculate = () => {
                         <hr />
                         <div>
                             <h3>Share on FB:</h3>
-                        </div>
+                        </div> */}
 
                     </div>
 

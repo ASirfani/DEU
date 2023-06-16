@@ -114,7 +114,6 @@ const Home = () => {
                 </p>
                 <form className="container-form" onSubmit={calculateTDEE}>
                     <div className="contanier-form-btn">
-                        <span className="spTxt">Imperial</span>
                         <span className="spTxt"> Metric</span>
                     </div>
                     <div className="container-form-input">
