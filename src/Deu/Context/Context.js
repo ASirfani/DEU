@@ -9,13 +9,13 @@ const MyContextProvider = ({ children }) => {
   const [moderate, setModerate] = useState(0);
   const [athlete, setAthlete] = useState(0);
   const [bmrs, setBmrs] = useState(0);
-  const [heights,setHeights] = useState(0)
-  const [weights,setWeights] = useState(0)
+  const [ibm,setIbm] = useState(0)
+ 
 
   // You can set initial values or default values for `amount` here
 
   return (
-    <MyContext.Provider value={{weights,setWeights,heights,setHeights,bmrs, setBmrs ,athlete, setAthlete, sedentary, setSedentary ,light, setLight,heavy, setHeavy,moderate, setModerate}}>
+    <MyContext.Provider value={{ibm,setIbm,bmrs, setBmrs ,athlete, setAthlete, sedentary, setSedentary ,light, setLight,heavy, setHeavy,moderate, setModerate}}>
       {children}
     </MyContext.Provider>
   );

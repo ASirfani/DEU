@@ -27,8 +27,9 @@ const Home = () => {
     const [selectedHeight, setSelectedHeight] = useState('');
     const [selectedActivity, setSelectedActivity] = useState('');
     const [bodyFat, setBodyFat] = useState('');
-    const {setWeights,setHeights,setSedentary,setLight,setBmrs,setHeavy,setAthlete,setModerate} = useContext(MyContext);
-    
+    const { setIbm, setSedentary, setLight, setBmrs, setHeavy, setAthlete, setModerate } = useContext(MyContext);
+    let ibms = weight / ((selectedHeight / 100) * (selectedHeight / 100));
+    setIbm(parseFloat(ibms.toFixed(1)));
 
     const handleGenderChange = (e) => {
         setGender(e.target.value);
@@ -56,22 +57,18 @@ const Home = () => {
 
     const calculateTDEE = (e) => {
         e.preventDefault();
-            const weightInKg = parseInt(weight, 10);
-            const heightInCm = parseInt(selectedHeight, 10);
-            const ageInYears = parseInt(age, 10);
+        const weightInKg = parseInt(weight, 10);
+        const heightInCm = parseInt(selectedHeight, 10);
+        const ageInYears = parseInt(age, 10);
+        //  (10 * weight in kg) + (6.25 * height in cm) - (5 * age in years) + 5
+        // Calculate BMR based on the selected gender
+        let bmr;
+        if (gender === 'male') {
+            bmr = 66 + 13.75 * weightInKg + 5 * heightInCm - 6.75 * ageInYears;
+        } else {
+            bmr = 655 + 9.56 * weightInKg + 1.85 * heightInCm - 4.68 * ageInYears;
+        }
 
-            setHeights(heightInCm)
-            setWeights(setWeights)
-    
-            //  (10 * weight in kg) + (6.25 * height in cm) - (5 * age in years) + 5
-            // Calculate BMR based on the selected gender
-            let bmr;
-            if (gender === 'male') {
-                bmr = 66 + 13.75 * weightInKg + 5 * heightInCm - 6.75 * ageInYears;
-            } else {
-                bmr = 655 + 9.56 * weightInKg + 1.85 * heightInCm - 4.68 * ageInYears;
-            }
-    
         setBmrs(bmr);
         let pal;
         for (let index = 0; index < activity.length; index++) {
@@ -142,12 +139,12 @@ const Home = () => {
                         </label>
                         <label className="weight">
                             <span className="spTxt title">Weight</span>
-                            <input type="text" placeholder="lbs" name="weight" value={weight} onChange={handleWeightChange} />
+                            <input type="text" placeholder="kg" name="weight" value={weight} onChange={handleWeightChange} />
                         </label>
                         <label className="height">
                             <span className="spTxt title">Height</span>
                             <input type="text" placeholder="cm" name="heigt" value={selectedHeight} onChange={handleHeightChange} />
-                       
+
                             {/* <select name="height" id="height" value={selectedHeight} onChange={handleHeightChange}>
                                 {height.map((h) => (
                                     <option key={h} value={h}>

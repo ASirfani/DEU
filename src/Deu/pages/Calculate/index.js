@@ -4,7 +4,9 @@ import { AiTwotoneLike } from "react-icons/ai";
 import { MyContext } from '../../Context/Context';
 
 const Calculate = () => {
-    const {heights,weights,sedentary,light,bmrs,heavy,athlete,moderate} = useContext(MyContext);
+    const {ibm,sedentary,light,bmrs,heavy,athlete,moderate} = useContext(MyContext);
+
+   
 
     const activity = [
         'Sedentary',
@@ -135,8 +137,8 @@ const Calculate = () => {
                             </table>
                         </div>
                         <div className='maintenanceTxt'>
-                            <h3>BMI Score: {(weights / Math.pow(heights,2)?0:(weights / Math.pow(heights,2 )))}</h3>
-                            <p>Your <strong>BMI</strong> is <strong>1,875.0</strong>, which means you are classified as <strong>Obese</strong>…</p>
+                            <h3>BMI Score: {ibm}</h3>
+                            <p>Your <strong>BMI</strong> is <strong>{ibm}</strong>, which means you are classified as <strong>Obese</strong>…</p>
                             <p>🔥 People who use this simple tool from Amazon lose significantly more weight versus people who don't.</p>
                             <table className='maintenanceTxt-table'>
                                 <tr>
