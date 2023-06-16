@@ -7,7 +7,6 @@ const Footer = () => {
         <nav className="navigation">
             <div className="logo">
                 <span style={{ color: '#fff' }}>©2023</span> <NavLink className='links' to="/" activeClassName="active">DEU.com</NavLink>
-                <span className='author'>By "Abbas Ali Irfani"</span>
             </div>
             <div className="user-info">
             <span className='author-email'>email:"abbasaliirfani@gmail.com"</span>
